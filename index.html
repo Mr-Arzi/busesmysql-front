@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Usuarios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Consumo de REST-API de Usuarios</h2>
+
+  <input type="hidden" id="userId">
+
+  <div>
+    <label>Name</label><br>
+    <input type="text" id="name">
+  </div>
+
+  <div>
+    <label>Email</label><br>
+    <input type="text" id="email">
+  </div>
+
+  <div>
+    <label>Age</label><br>
+    <input type="text" id="age">
+  </div>
+
+  <div>
+    <label>Comments</label><br>
+    <input type="text" id="comments">
+  </div>
+
+  <button id="submitBtn" onclick="postUser()">Guardar</button>
+  <button onclick="getUsers()">Cargar Usuarios</button>
+
+  <div id="resultado"></div>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Tu script de API -->
+  <script src="callrestapi.js"></script>
+
+</body>
+</html>
+
+
+
+
