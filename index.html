@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>CRUD de Usuarios</title>
+  <title>CRUD de Autobuses</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -38,44 +38,52 @@
 </head>
 <body>
 
-  <h2>Consumo de REST-API de Usuarios</h2>
+  <h2>Consumo de REST-API de Autobuses 🚌</h2>
 
-  <input type="hidden" id="userId">
+  <!-- Campo oculto para saber si estamos actualizando -->
+  <input type="hidden" id="busId">
 
   <div>
-    <label>Name</label><br>
-    <input type="text" id="name">
+    <label>Placa</label><br>
+    <input type="text" id="plate">
   </div>
 
   <div>
-    <label>Email</label><br>
-    <input type="text" id="email">
+    <label>Marca</label><br>
+    <input type="text" id="brand">
   </div>
 
   <div>
-    <label>Age</label><br>
-    <input type="text" id="age">
+    <label>Modelo</label><br>
+    <input type="text" id="model">
   </div>
 
   <div>
-    <label>Comments</label><br>
+    <label>Año</label><br>
+    <input type="number" id="year">
+  </div>
+
+  <div>
+    <label>Estado</label><br>
+    <input type="text" id="status">
+  </div>
+
+  <div>
+    <label>Comentarios</label><br>
     <input type="text" id="comments">
   </div>
 
-  <button id="submitBtn" onclick="postUser()">Guardar</button>
-  <button onclick="getUsers()">Cargar Usuarios</button>
+  <button id="submitBtn" onclick="postBus()">Guardar</button>
+  <button onclick="getBuses()">Cargar Autobuses</button>
 
   <div id="resultado"></div>
 
   <!-- jQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!-- Tu script de API -->
+  <!-- Tu script de lógica -->
   <script src="callrestapi.js"></script>
 
 </body>
 </html>
-
-
-
 
